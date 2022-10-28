@@ -1,0 +1,143 @@
+.header-nav{
+    width: 100%;
+    background: #014E56;
+}
+
+.nav{
+    @include row;
+    padding-top: 73px;
+
+    .nav__img{
+        padding-right: 80px;
+    }
+
+    .nav__link{
+        max-width: 870px;
+        width: 100%;
+        justify-content: space-between;
+        // position: relative;
+        @include row;
+        
+        
+    }
+
+    .nav__btn{
+        position: relative;
+        @include row;
+        justify-content: center;
+        width: 153px;
+        height: 48px;
+        margin-left: auto;
+        border: 2px solid #FFFFFF;
+        border-radius: 24px;
+        font-family: 'Livvic';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;  
+        color: #FFFFFF;
+    }
+}
+
+
+.nav__page{
+    flex-wrap: wrap;
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-left: 40px;
+    
+    
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+
+
+}
+
+// mobile-format
+@media only screen and (max-width: 375px){
+
+    .nav{
+        @include row;
+        position: relative;
+
+    }
+
+    .nav__page{
+        display: none;
+    }
+
+    .nav__btn{
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    .nav__box{
+        position: relative;
+        top: -5px; 
+
+        .nav__burger{
+            position: relative;
+            z-index: 3;
+            left: -40px;
+            display: inline-block;
+            width: 20px;
+            height: 3px;
+            background: #FFFFFF;
+            margin-top: -20px;
+            border-radius: 5px;
+            transition: all 0.5s ease-in-out;
+
+            &::before{
+                position: absolute;
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 3px;
+                background: #FFFFFF;
+                transition: all 0.5s ease-in-out;
+                transform: translateY(-6px);
+                border-radius: 5px;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 3px;
+                background: #FFFFFF;
+                transition: all 0.5s ease-in-out;
+                transform: translateY(6px);
+                border-radius: 5px;
+            }
+    
+        }
+        
+    }
+    .nav__box .nav__burger--bur{
+        background: transparent;
+        transition: all 0.5s ease-in-out;
+        &::before{
+            transform: rotate(45deg);
+        }
+    
+        &::after{
+            transform: rotate(-45deg);
+        }
+    
+    }
+
+}
