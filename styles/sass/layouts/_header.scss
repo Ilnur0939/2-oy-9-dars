@@ -6,18 +6,17 @@
 .nav{
     @include row;
     padding-top: 73px;
+    justify-content: space-between;
 
-    .nav__img{
-        padding-right: 80px;
-    }
+    // .nav__img{
+    //     padding-right: 80px;
+    // }
 
     .nav__link{
         max-width: 870px;
         width: 100%;
         justify-content: space-between;
-        // position: relative;
-        @include row;
-        
+        @include row;       
         
     }
 
@@ -63,7 +62,7 @@
 }
 
 // mobile-format
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 350px){
 
     .nav{
         @include row;
