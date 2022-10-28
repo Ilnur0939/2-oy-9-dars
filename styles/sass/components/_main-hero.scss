@@ -97,5 +97,17 @@
 
 // mobile-format
 @media only screen and (max-width: 375px){
-    
+
+    .hero{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .hero__title{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero__text{
+        margin: 0 auto;
+    }
 }
